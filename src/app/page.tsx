@@ -66,7 +66,7 @@ const Page = () => {
         <div className="w-full h-[29rem] snap-y">
           <ul className="bg-white text-gray-600 text-sm lg:text-base font-medium px-1 lg:px-4 border-4 md:border-8 border-purple-500 rounded-md lg:rounded-lg">
             {list.map((item, index) => (
-              <li key={index} className="flex pt-2.5 lg:pt-4 pb-2 lg:pb-3 mx-2 border-b-2 border-gray-200">
+              <li key={index} className={`flex pt-2.5 lg:pt-4 pb-2 lg:pb-3 mx-2 border-b-2 border-gray-200 ${item.checked ? 'text-decoration-line: line-through': ''} `}>
                 <input type="checkbox" className="mr-3" checked={item.checked} onClick={()=> toggleItem(index)} />
                 <span className="w-96 lg:w-full flex justify-between">
                   <div className='break-all lg:break-normal py-1 w-60 md:w-72 lg:w-full'>
